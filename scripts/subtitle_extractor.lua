@@ -81,7 +81,7 @@ local function sanitize_filename(name)
     cleaned_name = cleaned_name:gsub("%.([^.]*)$", "%1")
 
     -- 将 Windows 文件名中的非法字符替换为下划线
-    local illegal_chars = '[\\/:*?"<>|]'
+    local illegal_chars = '[\\/:*?"<>|%%]'
     cleaned_name = cleaned_name:gsub(illegal_chars, '_')
 
     -- 移除首尾空格
